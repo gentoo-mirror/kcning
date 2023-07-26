@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=Integrating Vim-style tabs for Evil mode users
+EAPI=8
+HOMEPAGE=https://github.com/krisajenkins/evil-tabs
+INHERIT=elisp
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=app-emacs/evil app-emacs/elscreen >=app-editors/emacs-25.3:*
+SLOT=0
+SRC_URI=https://github.com/krisajenkins/evil-tabs/archive/53d3314a810017b6056ab6796aef671f5ea1c063.tar.gz -> evil-tabs-1.0.0_pre20160217.tar.gz
+_eclasses_=elisp-common	b3b15bdbe800c721e93b69b70cce2b67	elisp	fbefa95f5e9ab880a34bc69832b7c0d7
+_md5_=f527901b3c8c5a9967599495aaab8afd

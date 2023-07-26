@@ -1,0 +1,15 @@
+BDEPEND=>=app-text/po4a-0.45 >=dev-util/itstool-1.2.0
+DEFINED_PHASES=postinst
+DEPEND=>=dev-libs/glib-2.32.1 >=sys-libs/gdbm-1.10 >=gui-libs/gtk-3.4.0 net-misc/modemmanager appindicator? ( dev-libs/libappindicator ) gtkspell? ( >=app-text/gtkspell-3.0.3 ) ofono? ( >=net-misc/ofono-1.9 )
+DESCRIPTION=Frontend for ModemManager daemon able to control specific modem functions
+EAPI=8
+HOMEPAGE=https://sourceforge.net/projects/modem-manager-gui/
+INHERIT=xdg-utils
+IUSE=gtkspell ofono appindicator
+KEYWORDS=~amd64 ~arm ~arm64
+LICENSE=GPL-3
+RDEPEND=>=dev-libs/glib-2.32.1 >=sys-libs/gdbm-1.10 >=gui-libs/gtk-3.4.0 net-misc/modemmanager appindicator? ( dev-libs/libappindicator ) gtkspell? ( >=app-text/gtkspell-3.0.3 ) ofono? ( >=net-misc/ofono-1.9 )
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/project/modem-manager-gui/modem-manager-gui-0.0.20.tar.gz
+_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=a61c5f904e84f45b4dc1d51432db12b4
