@@ -40,6 +40,7 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}/${P}-nocompress-man.patch"
+	"${FILESDIR}/${P}-fix-segfault-on-DNS-entries.patch"
 )
 
 pkg_postinst() {
