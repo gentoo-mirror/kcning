@@ -7,5 +7,5 @@ dev-python/isbnlib 3.10.14: python library to validate, clean, transform and get
 dev-python/papis-python-rofi 1.0.3: A Python module to make simple GUIs with Rofi (fork for Papis)
 dev-python/papis-rofi 0.6.0: Rofi based papis interface
 dev-python/pyocd 0.35.0-r1: ARM Cortex-M debugger for Python
-gui-apps/modem-manager-gui 0.0.20: Frontend for ModemManager daemon able to control specific modem functions
+gui-apps/modem-manager-gui 0.0.20-r1: Frontend for ModemManager daemon able to control specific modem functions
 sys-power/python-undervolt 0.3.0 9999: Undervolt Intel CPUs under Linux
