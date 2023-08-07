@@ -5,3 +5,4 @@
 app-office/papis:rofi - Enable GUI integration with rofi
 gui-apps/modem-manager-gui:gtkspell - Use gtkspell for dictionary support
 gui-apps/modem-manager-gui:ofono - Use ofono for telephony support
+sys-power/phc-intel:experimental - Enable experimental features
