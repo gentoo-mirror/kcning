@@ -1,0 +1,10 @@
+BDEPEND=media-libs/crystalhd-headers
+DEFINED_PHASES=install prepare
+DESCRIPTION=Broadcom Crystal HD library
+EAPI=8
+HOMEPAGE=https://github.com/kcning/libcrystalhd
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+SLOT=0
+SRC_URI=https://github.com/kcning/libcrystalhd/archive/refs/tags/3.10.0.tar.gz -> libcrystalhd-3.10.0.tar.gz
+_md5_=705b547873502bc6b4ec3b2bc3c60aa4
