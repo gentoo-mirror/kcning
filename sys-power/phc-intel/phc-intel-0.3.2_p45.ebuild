@@ -38,7 +38,7 @@ src_prepare() {
 	local PATCHES=()
 
 	if use experimental; then
-		PATCHES+=( "${FILESDIR}/${P}"-enable-experimental.patch )
+		PATCHES+=( "${FILESDIR}/${PN}"-enable-experimental.patch )
 	fi
 
 	default
