@@ -7,8 +7,8 @@ dev-python/papis-python-rofi 1.0.3: A Python module to make simple GUIs with Rof
 dev-python/papis-rofi 0.6.0: Rofi based papis interface
 dev-python/pyocd 0.35.1: ARM Cortex-M debugger for Python
 gui-apps/modem-manager-gui 0.0.20-r1: Frontend for ModemManager daemon able to control specific modem functions
-media-libs/crystalhd 3.10.0: Broadcom Crystal HD Hardware Decoder Driver
+media-libs/crystalhd 3.10.0_p1: Broadcom Crystal HD Hardware Decoder Driver
 media-libs/crystalhd-firmware 3.10.0: Broadcom Crystal HD Decoder firmware
 media-libs/crystalhd-headers 3.10.0: Broadcom Crystal HD headers for kernel driver and library
 media-libs/libcrystalhd 3.10.0: Broadcom Crystal HD library
-sys-power/phc-intel 0.3.2_p45 0.3.2_p46: Frequency driver for Intel CPUs with undervolting feature
+sys-power/phc-intel 0.3.2_p46: Frequency driver for Intel CPUs with undervolting feature
