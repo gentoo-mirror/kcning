@@ -11,4 +11,4 @@ media-libs/crystalhd 3.10.0_p1: Broadcom Crystal HD Hardware Decoder Driver
 media-libs/crystalhd-firmware 3.10.0: Broadcom Crystal HD Decoder firmware
 media-libs/crystalhd-headers 3.10.0: Broadcom Crystal HD headers for kernel driver and library
 media-libs/libcrystalhd 3.10.0: Broadcom Crystal HD library
-sys-power/phc-intel 0.3.2_p46: Frequency driver for Intel CPUs with undervolting feature
+sys-power/phc-intel 0.3.2_p46 0.3.2_p47: Frequency driver for Intel CPUs with undervolting feature
