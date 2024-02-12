@@ -1,7 +1,7 @@
 app-office/papis 0.13: Powerful and highly extensible command-line based document and bibliography manager.
 dev-python/arxiv2bib 1.0.8: Get metadata for academic papers from arXiv.org in BibTeX format.
 dev-python/doi 0.2.0: Python package to work with Document Object Identifier (doi).
-dev-python/habanero 1.2.3 1.2.6: client for Crossref search API
+dev-python/habanero 1.2.6: client for Crossref search API
 dev-python/isbnlib 3.10.14-r1: python library to validate, clean, transform and get metadata of ISBN strings (for devs).
 dev-python/papis-python-rofi 1.0.3: A Python module to make simple GUIs with Rofi (fork for Papis)
 dev-python/papis-rofi 0.6.0: Rofi based papis interface
