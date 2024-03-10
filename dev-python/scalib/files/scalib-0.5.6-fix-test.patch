@@ -1,0 +1,17 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index a6d7974..f15c16f 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -12,12 +12,6 @@ build-backend = "setuptools.build_meta"
+ write_to = "src/scalib/version.py"
+ 
+ [tool.pytest.ini_options]
+-addopts = [
+-    "--cov=scalib",
+-    "--doctest-modules",
+-    "-ra",
+-    "--pyargs",
+-]
+ testpaths = [
+     "tests",
+     "scalib",
