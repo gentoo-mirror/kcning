@@ -1,0 +1,65 @@
+From: Graham Inggs <ginggs@debian.org>
+Date: Sat, 6 Aug 2022 18:54:42 +0200
+Subject: Fix tray icon
+
+Origin: upstream, https://sourceforge.net/p/modem-manager-gui/code/ci/3f6d6c4ee74c2df59a4075979794a77d052e7179/
+Bug-Debian: https://bugs.debian.org/969231
+Last-Update: 2020-09-02
+
+Fix adapted from upstream commit
+---
+ configure             | 1 +
+ meson.build           | 1 +
+ src/main.c            | 2 +-
+ src/resources.h.meson | 1 +
+ 4 files changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/configure b/configure
+index c119f61..a8c2248 100755
+--- a/configure
++++ b/configure
+@@ -149,6 +149,7 @@ echo "/*
+ 
+ #define RESOURCE_SCALABLE_ICONS_DIR      \"$prefix/share/icons/hicolor/scalable/apps\"
+ #define RESOURCE_SYMBOLIC_ICONS_DIR      \"$prefix/share/icons/hicolor/symbolic/apps\"
++#define RESOURCE_PNG_ICONS_DIR           \"$prefix/share/icons/hicolor/128x128/apps\"
+ #define RESOURCE_PIXMAPS_DIR             \"$prefix/share/modem-manager-gui/pixmaps\"
+ #define RESOURCE_SOUNDS_DIR              \"$prefix/share/modem-manager-gui/sounds\"
+ #define RESOURCE_UI_DIR                  \"$prefix/share/modem-manager-gui/ui\"
+diff --git a/meson.build b/meson.build
+index 79ca2e1..2c6d3d1 100644
+--- a/meson.build
++++ b/meson.build
+@@ -22,6 +22,7 @@ resources_h.set('RESOURCE_NAME', '"@0@"'.format(meson.project_name()))
+ resources_h.set('RESOURCE_VERSION', '"@0@"'.format(meson.project_version()))
+ resources_h.set('RESOURCE_SCALABLE_ICONS_DIR', '"@0@"'.format(join_paths([ get_option('prefix'), get_option('datadir'), 'icons', 'hicolor', 'scalable', 'apps' ])))
+ resources_h.set('RESOURCE_SYMBOLIC_ICONS_DIR', '"@0@"'.format(join_paths([ get_option('prefix'), get_option('datadir'), 'icons', 'hicolor', 'symbolic', 'apps' ])))
++resources_h.set('RESOURCE_PNG_ICONS_DIR', '"@0@"'.format(join_paths([ get_option('prefix'), get_option('datadir'), 'icons', 'hicolor', '128x128', 'apps' ])))
+ resources_h.set('RESOURCE_PIXMAPS_DIR', '"@0@"'.format(join_paths([ get_option('prefix'), get_option('datadir'), 'modem-manager-gui', 'pixmaps' ])))
+ resources_h.set('RESOURCE_SOUNDS_DIR', '"@0@"'.format(join_paths([ get_option('prefix'), get_option('datadir'), 'modem-manager-gui', 'sounds' ])))
+ resources_h.set('RESOURCE_UI_DIR', '"@0@"'.format(join_paths([ get_option('prefix'), get_option('datadir'), 'modem-manager-gui', 'ui' ])))
+diff --git a/src/main.c b/src/main.c
+index 32d6d5f..733a190 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -2038,7 +2038,7 @@ static void mmgui_main_tray_icon_build(mmgui_application_t mmguiapp)
+ 	if (g_strrstr(desktop, "GNOME") != NULL) {
+ 		iconfilepath = g_build_filename(RESOURCE_SYMBOLIC_ICONS_DIR, "modem-manager-gui-symbolic.svg", NULL);
+ 	} else {
+-		iconfilepath = g_build_filename(RESOURCE_SYMBOLIC_ICONS_DIR, "modem-manager-gui.svg", NULL);
++		iconfilepath = g_build_filename(RESOURCE_PNG_ICONS_DIR, "modem-manager-gui.png", NULL);
+ 	}
+ 	mmguiapp->window->indicator = app_indicator_new(RESOURCE_LOCALE_DOMAIN, iconfilepath, APP_INDICATOR_CATEGORY_APPLICATION_STATUS);
+ 	g_free(iconfilepath);
+diff --git a/src/resources.h.meson b/src/resources.h.meson
+index 7bfff52..06c8dee 100644
+--- a/src/resources.h.meson
++++ b/src/resources.h.meson
+@@ -24,6 +24,7 @@
+ #mesondefine RESOURCE_VERSION
+ #mesondefine RESOURCE_SCALABLE_ICONS_DIR
+ #mesondefine RESOURCE_SYMBOLIC_ICONS_DIR
++#mesondefine RESOURCE_PNG_ICONS_DIR
+ #mesondefine RESOURCE_PIXMAPS_DIR
+ #mesondefine RESOURCE_SOUNDS_DIR
+ #mesondefine RESOURCE_UI_DIR

@@ -1,0 +1,36 @@
+From: Wolfram Sang <wsa@kernel.org>
+Date: Sat, 6 Aug 2022 19:02:06 +0200
+Forwarded: not-needed
+Subject: fix_assertion_not_set
+
+---
+ src/addressbooks.c | 2 +-
+ src/main.c         | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/addressbooks.c b/src/addressbooks.c
+index ff9c423..fd28285 100644
+--- a/src/addressbooks.c
++++ b/src/addressbooks.c
+@@ -979,7 +979,7 @@ mmgui_addressbooks_t mmgui_addressbooks_new(mmgui_event_ext_callback callback, m
+ 	addressbooks->gnomecontacts = NULL;
+ 	
+ 	/*GNOME code path*/
+-	if (g_strrstr(desktop, "GNOME") != NULL) {
++	if (desktop && g_strrstr(desktop, "GNOME") != NULL) {
+ 		if (mmgui_libpaths_cache_check_library_version(libcache, "libebook-1.2", 12, 3, 0)) {
+ 			/*Open module*/
+ 			addressbooks->ebookmodule = g_module_open(mmgui_libpaths_cache_get_library_full_path(libcache, "libebook-1.2"), G_MODULE_BIND_LAZY);
+diff --git a/src/main.c b/src/main.c
+index 733a190..2e31d13 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -2035,7 +2035,7 @@ static void mmgui_main_tray_icon_build(mmgui_application_t mmguiapp)
+ 	desktop = getenv("XDG_CURRENT_DESKTOP");
+ 	
+ 	/*Indicator*/
+-	if (g_strrstr(desktop, "GNOME") != NULL) {
++	if (desktop && g_strrstr(desktop, "GNOME") != NULL) {
+ 		iconfilepath = g_build_filename(RESOURCE_SYMBOLIC_ICONS_DIR, "modem-manager-gui-symbolic.svg", NULL);
+ 	} else {
+ 		iconfilepath = g_build_filename(RESOURCE_PNG_ICONS_DIR, "modem-manager-gui.png", NULL);
