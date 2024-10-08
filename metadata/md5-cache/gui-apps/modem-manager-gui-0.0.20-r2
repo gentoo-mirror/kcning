@@ -11,5 +11,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2.32.1 >=sys-libs/gdbm-1.10 >=gui-libs/gtk-3.4.0 net-misc/modemmanager appindicator? ( dev-libs/libappindicator ) gtkspell? ( >=app-text/gtkspell-3.0.3 ) ofono? ( >=net-misc/ofono-1.9 )
 SLOT=0
 SRC_URI=https://downloads.sourceforge.net/project/modem-manager-gui/modem-manager-gui-0.0.20.tar.gz
-_eclasses_=xdg-utils	5465aed08f1dfc2a75f14cbea4272961
+_eclasses_=xdg-utils	42869b3c8d86a70ef3cf75165a395e09
 _md5_=369deaffbb064f824cae801ff45e6454
