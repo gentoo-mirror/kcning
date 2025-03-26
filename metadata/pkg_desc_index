@@ -2,11 +2,10 @@ app-office/papis 0.13: Powerful and highly extensible command-line based documen
 dev-python/arxiv2bib 1.0.8: Get metadata for academic papers from arXiv.org in BibTeX format.
 dev-python/doi 0.2.0: Python package to work with Document Object Identifier (doi).
 dev-python/elevate 0.1.3: Python library for requesting root privileges
-dev-python/habanero 1.2.6: client for Crossref search API
+dev-python/habanero 1.2.6 2.2.0: client for Crossref search API
 dev-python/isbnlib 3.10.14-r1: python library to validate, clean, transform and get metadata of ISBN strings (for devs).
 dev-python/papis-python-rofi 1.0.3: A Python module to make simple GUIs with Rofi (fork for Papis)
 dev-python/papis-rofi 0.6.0: Rofi based papis interface
-dev-python/scalib 0.5.6: Side-Channel Analysis Library
 gui-apps/modem-manager-gui 0.0.20-r2: Frontend for ModemManager daemon able to control specific modem functions
 media-libs/crystalhd 3.10.0_p1: Broadcom Crystal HD Hardware Decoder Driver
 media-libs/crystalhd-firmware 3.10.0: Broadcom Crystal HD Decoder firmware
