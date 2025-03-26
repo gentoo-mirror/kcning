@@ -3,16 +3,16 @@
 
 EAPI=8
 
-DISTUTILS_USE_PEP517=setuptools
+DISTUTILS_USE_PEP517=hatchling
 PYTHON_COMPAT=( python3_{10..13} )
 inherit distutils-r1 pypi
 
-DESCRIPTION="Get metadata for academic papers from arXiv.org in BibTeX format."
+DESCRIPTION="client for Crossref search API"
 HOMEPAGE="
-	https://pypi.org/project/arxiv2bib
-	https://nathangrigg.github.io/arxiv2bib
+	https://pypi.org/project/habanero/
+	https://github.com/sckott/habanero
 "
 
-LICENSE="BSD"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
