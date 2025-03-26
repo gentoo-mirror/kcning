@@ -7,16 +7,17 @@ DISTUTILS_USE_PEP517=hatchling
 PYTHON_COMPAT=( python3_{10..13} )
 inherit distutils-r1 pypi
 
-DESCRIPTION="Powerful and highly extensible command-line based document and bibliography manager."
+DESCRIPTION="Powerful and highly extensible cmd based document and bibliography manager."
 HOMEPAGE="
 	https://pypi.org/project/papis
 	https://github.com/papis/papis
 "
 
-KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3+"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="rofi"
+RESTRICT="test"
 
 RDEPEND="
 	>=dev-python/arxiv2bib-1.0.7[${PYTHON_USEDEP}]
@@ -49,5 +50,7 @@ RDEPEND="
 src_prepare() {
 	eapply_user
 	mv contrib/shell_completion/click/bash/{papis.bash,papis} || die
-	sed -i -e 's/papis.bash/papis/' contrib/shell_completion/Makefile || die
+	sed -i -e 's/papis.bash/papis/g' contrib/shell_completion/Makefile || die
+	sed -i -e 's/papis.bash/papis/g' pyproject.toml || die
+	sed -i -e 's/papis.bash/papis/g' doc/source/shell_completion.rst || die
 }
