@@ -14,17 +14,27 @@ inherit distutils-r1 git-r3 meson
 
 LICENSE="MIT"
 SLOT="0"
+IUSE="gtk3 qt6"
+REQUIRED_USE="|| ( gtk3 qt6 )"
 
 PATCHES=(
 	"${FILESDIR}/${P}-fix-dlib-data.patch"
 )
 
+# NOTE: dlib version < 19.24.3 does not work with numpy 2.0
 RDEPEND="
 	dev-python/elevate[${PYTHON_USEDEP}]
-	dev-python/numpy[${PYTHON_USEDEP}]
+	>=dev-python/numpy-2.0.0[${PYTHON_USEDEP}]
 	dev-python/python-pam[${PYTHON_USEDEP}]
-	media-libs/opencv[gtk3,png,python,v4l]
-	sci-libs/dlib[python]
+	gtk3? (
+		media-libs/opencv[gtk3,png,python,v4l]
+	)
+	qt6? (
+		media-libs/opencv[qt6,png,python,v4l]
+		>=dev-qt/qtbase-6.0.0[X]
+		>=dev-qt/qtmultimedia-6.0.0[X]
+	)
+	>=sci-libs/dlib-19.24.3[python]
 	sys-auth/howdy-models
 "
 
