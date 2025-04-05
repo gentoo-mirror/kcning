@@ -40,5 +40,9 @@ RDEPEND="
 
 src_prepare() {
 	default
-	rm "${S}/README.md" || die
+	rm "${S}"/README.md || die
+
+	if ! use gtk3; then
+		sed -i "s/^subdir('howdy-gtk')/#&/" "${S}"/meson.build || die
+	fi
 }
