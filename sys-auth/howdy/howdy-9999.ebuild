@@ -7,7 +7,7 @@ DESCRIPTION="Windows Hello style facial authentication for Linux"
 HOMEPAGE="https://github.com/boltgolt/howdy"
 
 EGIT_REPO_URI="https://github.com/boltgolt/howdy.git"
-EGIT_BRANCH="beta"
+EGIT_BRANCH="master"
 PYTHON_COMPAT=( python3_{10..13} )
 DISTUTILS_USE_PEP517=no
 inherit distutils-r1 git-r3 meson
