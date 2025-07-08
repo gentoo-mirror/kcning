@@ -16,6 +16,7 @@ inherit distutils-r1 git-r3 meson
 LICENSE="MIT"
 SLOT="0"
 IUSE="gtk3 qt6"
+KEYWORDS="~amd64 ~x86"
 REQUIRED_USE="|| ( gtk3 qt6 )"
 
 PATCHES=(
