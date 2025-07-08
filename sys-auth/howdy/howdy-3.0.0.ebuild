@@ -7,16 +7,17 @@ DESCRIPTION="Windows Hello style facial authentication for Linux"
 HOMEPAGE="https://github.com/boltgolt/howdy"
 
 EGIT_REPO_URI="https://github.com/boltgolt/howdy.git"
-EGIT_BRANCH="master"
-EGIT_COMMIT="d3ab99382f88f043d15f15c1450ab69433892a1c"
 PYTHON_COMPAT=( python3_{10..13} )
 DISTUTILS_USE_PEP517=no
-inherit distutils-r1 git-r3 meson
+EGIT_COMMIT="d3ab99382f88f043d15f15c1450ab69433892a1c"
+inherit distutils-r1 meson
 
+SRC_URI="https://github.com/boltgolt/howdy/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 LICENSE="MIT"
 SLOT="0"
-IUSE="gtk3 qt6"
 KEYWORDS="~amd64 ~x86"
+IUSE="gtk3 qt6"
 REQUIRED_USE="|| ( gtk3 qt6 )"
 
 PATCHES=(
