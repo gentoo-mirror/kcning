@@ -8,6 +8,7 @@ HOMEPAGE="https://github.com/boltgolt/howdy"
 
 EGIT_REPO_URI="https://github.com/boltgolt/howdy.git"
 EGIT_BRANCH="master"
+EGIT_COMMIT="d3ab99382f88f043d15f15c1450ab69433892a1c"
 PYTHON_COMPAT=( python3_{10..13} )
 DISTUTILS_USE_PEP517=no
 inherit distutils-r1 git-r3 meson
