@@ -5,10 +5,11 @@ EAPI=8
 HOMEPAGE=https://github.com/boltgolt/howdy
 INHERIT=distutils-r1 git-r3 meson
 IUSE=gtk3 qt6 python_targets_python3_11 python_targets_python3_12 python_targets_python3_13
+KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 PROPERTIES=live
 RDEPEND=dev-python/elevate[python_targets_python3_11(-)?,python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/numpy-2.0.0[python_targets_python3_11(-)?,python_targets_python3_12(-)?,python_targets_python3_13(-)?] dev-python/python-pam[python_targets_python3_11(-)?,python_targets_python3_12(-)?,python_targets_python3_13(-)?] gtk3? ( media-libs/opencv[gtk3,png,python,v4l] ) qt6? ( media-libs/opencv[qt6,png,python,v4l] >=dev-qt/qtbase-6.0.0[X] >=dev-qt/qtmultimedia-6.0.0[X] ) >=sci-libs/dlib-19.24.3[python] sys-auth/howdy-models python_targets_python3_11? ( dev-lang/python:3.11 ) python_targets_python3_12? ( dev-lang/python:3.12 ) python_targets_python3_13? ( dev-lang/python:3.13 )
 REQUIRED_USE=|| ( gtk3 qt6 ) || ( python_targets_python3_11 python_targets_python3_12 python_targets_python3_13 )
 SLOT=0
 _eclasses_=toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	out-of-source-utils	dbf9e34ee8964084651e25907fa8f52c	multibuild	4650a65187015567b4e041bb9bfdb364	multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	5ffe8ec396a751540949b565de0f048c	python-r1	0e15b2ab9cfc87d7474678201d6bca38	distutils-r1	be1082db72eb0381081ef946a26e3a71	git-r3	875eb471682d3e1f18da124be97dcc81	meson	99466844dd8d4fcfb07578a76f5a9922
-_md5_=22bf4fdfd5ce27268e458764d46901be
+_md5_=cec65286f5dd3e2c9e104732a85a26e9
