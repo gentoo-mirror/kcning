@@ -5,4 +5,4 @@ HOMEPAGE=https://github.com/davisking/dlib-models
 LICENSE=CC0-1.0
 SLOT=0
 SRC_URI=https://github.com/davisking/dlib-models/raw/master/dlib_face_recognition_resnet_model_v1.dat.bz2 https://github.com/davisking/dlib-models/raw/master/mmod_human_face_detector.dat.bz2 https://github.com/davisking/dlib-models/raw/master/shape_predictor_5_face_landmarks.dat.bz2
-_md5_=393dc8d6f43822eecefe20aacd965db0
+_md5_=f4ec844c3d8955a7beb66b5121228560
